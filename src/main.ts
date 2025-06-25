@@ -5,7 +5,9 @@ import tailwindLogo from '/tailwindcss-mark.svg'
 import typeScriptLogo from '/typescript.svg'
 
 async function loadOpenDay() {
-  const res = await fetch('/api/OpenDay.json')
+  // Use the correct base path for GitHub Pages
+  const base = import.meta.env.BASE_URL || '/';
+  const res = await fetch(`${base}api/OpenDay.json`)
   const data = await res.json()
   return data
 }
