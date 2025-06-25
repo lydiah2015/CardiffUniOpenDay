@@ -3,6 +3,7 @@ import './style.css'
 import viteLogo from '/vite.svg'
 import tailwindLogo from '/tailwindcss-mark.svg'
 import typeScriptLogo from '/typescript.svg'
+import cuLogo from '/cu-logo.svg'
 
 async function loadOpenDay() {
   // Use the correct base path for GitHub Pages
@@ -36,14 +37,14 @@ function renderOpenDay(data: any) {
     <div class="min-h-screen bg-cardiff-white font-sans px-2 py-6">
       <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-6">
         <a href="https://www.cardiff.ac.uk/" target="_blank" rel="noopener noreferrer">
-          <img src="/cu-logo.svg" alt="Cardiff University Logo" class="h-16 w-auto" />
+          <img src="${cuLogo}" alt="Cardiff University Logo" class="h-16 w-auto" />
         </a>
       </div>
       <h1 class="text-3xl sm:text-5xl font-bold text-cardiff-red mb-8 text-center">Cardiff University Open Day</h1>
       <div class="grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
         ${data.topics.map((topic: any) => topic && topic.name ? `
           <div class="bg-cardiff-grey rounded-lg shadow p-6 flex flex-col">
-            <img src="${topic.cover_image || '/cu-logo.svg'}" alt="${topic.name}" class="h-32 w-full object-cover rounded mb-4" />
+            <img src="${topic.cover_image || cuLogo}" alt="${topic.name}" class="h-32 w-full object-cover rounded mb-4" />
             <h2 class="text-xl font-bold text-cardiff-red mb-2">${topic.name}</h2>
             <p class="text-cardiff-dark mb-2">${topic.description || ''}</p>
             ${topic.programs && topic.programs.length ? `
