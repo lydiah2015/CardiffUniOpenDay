@@ -1,8 +1,8 @@
 // Utility to fetch and display Open Day data from public/OpenDay14.json
 import './style.css'
-import viteLogo from '/vite.svg'
-import tailwindLogo from '/tailwindcss-mark.svg'
-import typeScriptLogo from '/typescript.svg'
+// import viteLogo from '/vite.svg'
+// import tailwindLogo from '/tailwindcss-mark.svg'
+// import typeScriptLogo from '/typescript.svg'
 import cuLogo from '/cu-logo.svg'
 
 async function loadOpenDay() {
